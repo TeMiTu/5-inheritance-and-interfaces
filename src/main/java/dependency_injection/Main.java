@@ -26,6 +26,7 @@ public class Main {
      * reusable.
      */
     public static void main(String... args) {
+        
 
         /*
          * A new application object is created with the System.out object as an
@@ -34,6 +35,9 @@ public class Main {
         Application app = new Application(System.out);
         app.run();
 
+        PrinterWithTimestamp printer = new PrinterWithTimestamp();
+        Application toinen = new Application(printer);
+        toinen.run();
         /*
          * After running the code, try creating an Application and passing in an
          * instance of the PrinterWithTimestamp class as an argument.
